@@ -696,7 +696,6 @@ body {
     left: auto;
     transform: translateX(0);
     border-bottom: 1px solid #ececec;
-    background-color: rgba(24, 96, 108, 0.4);
     z-index: 100;
     box-sizing: border-box;
   }
@@ -1433,7 +1432,6 @@ body {
     height: 500px;
     width: calc((100% - 30px) / 2);
     border-radius: 8px;
-    border: solid 1px #2196f3;
     padding: 15px;
     transition: 150ms ease-in-out;
   }
