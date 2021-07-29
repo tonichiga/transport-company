@@ -3,6 +3,7 @@
 }
 
 .features-title {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +13,22 @@
   font-size: 28px;
   line-height: 33px;
   color: $title-text-color;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: $accent-color;
+    right: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.feactures--title {
+  &::after {
+    right: 27%;
+  }
 }
 
 .features-item {

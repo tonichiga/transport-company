@@ -1,7 +1,7 @@
 .hero {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 178px;
+  padding-top: 391px;
   padding-bottom: 118px;
   background-image: linear-gradient(
       to right,
@@ -32,12 +32,12 @@
   padding-right: 60px;
   padding-left: 60px;
   color: $second-text-color;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 26px;
   line-height: 42px;
-  text-align: center;
+  text-align: start;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
   animation-name: heroAction, heroActionOpacity;
   animation-duration: 1500ms;
@@ -102,7 +102,7 @@
         rgba(47, 48, 58, 0.8),
         rgba(47, 48, 58, 0.8)
       ),
-      url(../image/transport-company/bg.jpg);
+      url(../image/transport-company/header.jpg);
     max-width: 480px;
     background-size: contain;
     // background-position: center;
@@ -116,7 +116,7 @@
           rgba(47, 48, 58, 0.8),
           rgba(47, 48, 58, 0.8)
         ),
-        url(../image/transport-company/bg.jpg);
+        url(../image/transport-company/header.jpg);
     }
   }
 }
@@ -128,12 +128,12 @@
         rgba(47, 48, 58, 0.8),
         rgba(47, 48, 58, 0.8)
       ),
-      url(../image/transport-company/bg.jpg); // max-width: 480px;
+      url(../image/transport-company/header.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    padding-top: 198px;
+    padding-top: 391px;
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -144,28 +144,30 @@
           rgba(47, 48, 58, 0.8),
           rgba(47, 48, 58, 0.8)
         ),
-        url(../image/transport-company/bg.jpg);
+        url(../image/transport-company/header.jpg);
     }
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
     background-image: linear-gradient(
         to right,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
+        rgba(47, 48, 58, 0.5),
+        rgba(47, 48, 58, 0.5)
       ),
-      url(../image/transport-company/bg.jpg);
+      url(../image/transport-company/header.jpg);
     // max-width: 480px;
     // background-size: cover;
-    background-size: auto;
-    background-position: bottom;
+    // background-size: auto;
+    // background-position: bottom;
     background-repeat: no-repeat;
-    padding-top: 198px;
+    padding-top: 391px;
     // height: 600px;
     // width: 1200px;
-    padding-top: 280px;
+    padding-top: 391px;
     padding-bottom: 187px;
   }
 
@@ -177,18 +179,73 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .hero {
+      background-attachment: fixed;
       background-image: linear-gradient(
           to right,
           rgba(47, 48, 58, 0.8),
           rgba(47, 48, 58, 0.8)
         ),
-        url(../image/transport-company/bg.jpg);
+        url(../image/transport-company/header.jpg);
       // background-size: cover;
       // background-position: center;
       // background-size: auto;
       // background-position: bottom;
       // background-repeat: no-repeat;
       // background-size: auto;
+    }
+  }
+  .hero-title__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // animation-name: heroAction;
+    // animation-timing-function: $defaul-cubic-bezier;
+    // animation-duration: 3000ms;
+    // animation-direction: alternate;
+  }
+  .hero-title {
+    animation-timing-function: $defaul-cubic-bezier;
+    animation-duration: 1500ms;
+    animation-direction: alternate;
+    animation-name: heroActionTitle;
+
+    // transform: translateX(0);
+  }
+  .hero-img {
+    animation-timing-function: ease-out;
+    animation-duration: 3000ms;
+    // animation-delay: ;
+    animation-direction: alternate;
+    animation-name: heroActionImg;
+  }
+  @keyframes heroActionTitle {
+    0% {
+      opacity: 0;
+      // transform: translateX(-50%);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      // transform: translateX(0%);
+    }
+  }
+
+  @keyframes heroActionImg {
+    0% {
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
     }
   }
 }

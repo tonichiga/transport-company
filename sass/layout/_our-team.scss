@@ -1,3 +1,25 @@
+@keyframes img {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 .our-team {
   display: flex;
   justify-content: center;
@@ -141,8 +163,30 @@
     margin: 0;
     width: auto;
   }
+
+  .our-team .social {
+    display: flex;
+    background-color: $second-text-color;
+    width: 206px;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .our-team {
-    padding-top: 94px;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.9),
+        rgba(47, 48, 58, 0.9)
+      ),
+      url(../../image/transport-company/bg.jpg);
+    background-attachment: fixed;
+    // background-color: transparent;
   }
   .our-team-item-list:nth-child(-n + 2) {
     margin-bottom: 0;
@@ -169,18 +213,6 @@
   //   margin-bottom: 30px;
   // }
 
-  .our-team .social {
-    display: flex;
-    background-color: $second-text-color;
-    width: 206px;
-    justify-content: space-between;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .our-team .our-team-social {
     &:hover,
     &:focus {
@@ -189,13 +221,37 @@
     }
   }
 
-  .our-team {
-    background: #f5f4fa;
-    padding-bottom: 94px;
-  }
   //
   .img-test {
     width: 270px;
     height: 260px;
+  }
+
+  .our-team__block-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    & img {
+      opacity: 0;
+      margin-right: 105px;
+      // animation: img 500ms linear;
+    }
+    & p {
+      opacity: 0;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 50px;
+      color: #fff;
+      margin: 0;
+      // animation: right 500ms linear;
+    }
+    .our-team__block-information {
+      & h1 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.4;
+        color: $accent-color;
+      }
+    }
   }
 }

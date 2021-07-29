@@ -38,7 +38,8 @@
 .about-us-container-svg {
   height: 120px;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
+  cursor: pointer;
+  transition: 150ms ease-out;
 }
 // ДО
 
@@ -76,8 +77,64 @@
   }
 
   .about-us-item-list {
+    height: 500px;
     width: calc((100% - 30px) / 2);
+    border-radius: 8px;
+    border: solid 1px $accent-color;
+    padding: 15px;
+    transition: 150ms ease-in-out;
+    & p {
+      transition: 150ms ease-in-out;
+    }
+    &:hover {
+      background-color: $accent-color;
+      & p {
+        color: #ffffff;
+      }
+      & .about-us-container-svg {
+        & svg {
+          fill: #ffffff;
+        }
+      }
+    }
   }
+  .about-us-item-list:nth-child(1) {
+    // transition: 250ms ease-in-out;
+
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  .about-us-item-list:nth-child(2) {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  .about-us-item-list:nth-child(3) {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  .about-us-item-list:nth-child(4) {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  @keyframes aboutUs1 {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(50%);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
   .about-us-item-list {
     &:nth-child(-n + 2) {
       margin-bottom: 30px;
@@ -107,7 +164,7 @@
 
   .about-us {
     padding-top: 94px;
-    padding-bottom: 0;
+    padding-bottom: 94px;
     background-color: #ffffff;
   }
 

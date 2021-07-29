@@ -19,3 +19,8 @@
 @import "./layout/follow-us";
 @import "./layout/portfolio-item";
 @import "./components/backdrop";
+@import "./layout/contact-us";
+
+html {
+  scroll-behavior: smooth;
+}

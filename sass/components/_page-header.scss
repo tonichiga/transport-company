@@ -1,5 +1,5 @@
 .page-header {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +7,8 @@
   left: 50%;
   transform: translateX(-50%);
   border-bottom: 1px solid #ececec;
-  background-color: $second-text-color;
+  // background-color: $second-text-color;
+  background-color: transparent;
   z-index: 100;
   box-sizing: border-box;
 }
@@ -27,7 +28,7 @@
   width: 16px;
   height: 11px;
   margin-right: 10px;
-  fill: $primary-text-color;
+  fill: #ffffff;
   transition: 250ms $defaul-cubic-bezier;
 }
 
@@ -42,7 +43,7 @@
   margin-right: 10px;
   width: 10px;
   height: 14px;
-  fill: $primary-text-color;
+  fill: #ffffff;
   transition: 250ms $defaul-cubic-bezier;
 }
 .icon-tel-svg {
@@ -78,7 +79,7 @@
 }
 
 .site-nav-text {
-  color: $title-text-color;
+  color: #ffffff;
 }
 .site-nav {
   text-align: center;
@@ -99,7 +100,8 @@
   pointer-events: none;
   transform: translateX(-50%);
   transition: opacity 250ms $defaul-cubic-bezier;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: transparent;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
 }
@@ -117,7 +119,7 @@
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.02em;
-  color: $primary-text-color;
+  color: #ffffff;
 }
 
 .page-header {
@@ -205,7 +207,7 @@
     transform: translateX(-0%);
   }
   .page-header {
-    position: fixed;
+    // position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,7 +215,8 @@
     left: auto;
     transform: translateX(-0);
     border-bottom: 1px solid #ececec;
-    background-color: $second-text-color;
+    // background-color: $second-text-color;
+    background-color: rgba(24, 96, 108, 0.4);
     z-index: 100;
     box-sizing: border-box;
   }
@@ -269,7 +272,7 @@
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.02em;
-    color: $primary-text-color;
+    color: #ffffff;
     text-transform: none;
   }
   .site-nav-text {

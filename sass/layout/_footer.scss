@@ -14,6 +14,7 @@
 .footer-main .link.logo {
   padding: 0px;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 .footer-list-link:not(:last-child) {
   margin-bottom: 8px;
@@ -106,10 +107,9 @@
     background-color: #2f303a;
 
     .link.logo {
-      display: flex;
-      margin-bottom: 20px;
-      margin-right: 0px;
-      width: 153px;
+      // display: flex;
+
+      // width: 153px;
     }
     .footer {
       padding-left: 0px;
@@ -160,10 +160,10 @@
     background-color: #2f303a;
 
     .link.logo {
-      display: flex;
-      margin-bottom: 20px;
-      margin-right: 0px;
-      width: 153px;
+      // display: flex;
+      // justify-content: center;
+
+      // width: 153px;
     }
     .footer {
       padding-left: 0px;
@@ -191,7 +191,7 @@
 
   .footer-address-container {
     display: flex;
-    text-align: start;
+    text-align: center;
     flex-direction: column;
     width: 231px;
   }
